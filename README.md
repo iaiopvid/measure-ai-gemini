@@ -1,4 +1,4 @@
-# Backend - Water and Gas Consumption Reading Service
+# Backend - Measure AI Gemini
 
 ## Description
 
@@ -6,9 +6,9 @@ The application is responsible for managing individualized water and gas consump
 
 ## Endpoints
 
-- [POST /upload](#post-upload)
-- [PATCH /confirm](#patch-confirm)
-- [GET /\<customer_code\>/list](#get-customercodelist)
+-   [POST /upload](#post-upload)
+-   [PATCH /confirm](#patch-confirm)
+-   [GET /\<customer_code\>/list](#get-customercodelist)
 
 ## Installation
 
@@ -16,23 +16,23 @@ To install this project, follow these steps:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/dopimentel/back-end-consumption-reader.git
-   ```
+    ```bash
+    git clone https://github.com/dopimentel/back-end-consumption-reader.git
+    ```
 
 2. **Access the project root folder:**
 
-   ```bash
-   cd back-end-consumption-reader
-   ```
+    ```bash
+    cd back-end-consumption-reader
+    ```
 
 3. **Create a .env file:**
 
-   Create a file named `.env` in the project root folder and add the necessary environment variables. For example:
+    Create a file named `.env` in the project root folder and add the necessary environment variables. For example:
 
-   ```
-   GEMINI_API_KEY=YOUR_API_KEY
-   ```
+    ```
+    GEMINI_API_KEY=YOUR_API_KEY
+    ```
 
 ## Running the Application
 
@@ -40,9 +40,9 @@ To use this project, follow these guidelines:
 
 1. **Make sure you have Docker:**
 
-   ```bash
-   docker-compose up
-   ```
+    ```bash
+    docker-compose up
+    ```
 
 ### POST /upload
 
@@ -63,9 +63,9 @@ Response Body:
 
 ```json
 {
-  "image_url": "string",
-  "measure_value": "integer",
-  "measure_uuid": "string"
+    "image_url": "string",
+    "measure_value": "integer",
+    "measure_uuid": "string"
 }
 ```
 
@@ -77,8 +77,8 @@ Request Body:
 
 ```json
 {
-  "measure_uuid": "string",
-  "confirmed_value": "integer"
+    "measure_uuid": "string",
+    "confirmed_value": "integer"
 }
 ```
 
@@ -86,7 +86,7 @@ Response Body:
 
 ```json
 {
-  "success": true
+    "success": true
 }
 ```
 
@@ -98,28 +98,28 @@ Response Body:
 
 ```json
 {
-  "customer_code": "string",
-  "measures": [
-    {
-      "measure_uuid": "string",
-      "measure_datetime": "datetime",
-      "measure_type": "string",
-      "has_confirmed": "boolean",
-      "image_url": "string"
-    }
-  ]
+    "customer_code": "string",
+    "measures": [
+        {
+            "measure_uuid": "string",
+            "measure_datetime": "datetime",
+            "measure_type": "string",
+            "has_confirmed": "boolean",
+            "image_url": "string"
+        }
+    ]
 }
 ```
 
 ## Technologies
 
-- TypeScript
-- Docker
-- Node.js
-- Express.js
-- MySQL
-- Sequelize
-- Google Gemini API
+-   TypeScript
+-   Docker
+-   Node.js
+-   Express.js
+-   MySQL
+-   Sequelize
+-   Google Gemini API
 
 ## License
 
