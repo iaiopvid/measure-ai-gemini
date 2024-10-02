@@ -117,7 +117,7 @@ Response Body:
 -   Docker
 -   Node.js
 -   Express.js
--   MySQL
+-   PostgreSQL
 -   Sequelize
 -   Google Gemini API
 
